@@ -82,6 +82,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -145,6 +146,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-link:hover,
@@ -164,6 +166,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts {
@@ -217,6 +220,7 @@ img {
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
@@ -276,8 +280,8 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* our work */
-/* our team section */
+        /* our work */
+     /* our team section */
 
 .work-section {
   padding-bottom: 94px;
@@ -338,6 +342,7 @@ background-color: var(--secondary-text-color);
 }
 .team-section .social-list-icon {
   fill: #AFB1B8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -367,10 +372,12 @@ fill: var(--secondary-text-color);
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-icon {
   fill: #AFB1B8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover .clients-list-icon,
@@ -406,6 +413,7 @@ fill: var(--secondary-text-color);
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--footer-link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-wrapper {
@@ -433,7 +441,7 @@ fill: var(--secondary-text-color);
   display: flex;
 }
 
-.social-link-description {
+.footer-social-link-description {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -455,7 +463,8 @@ fill: var(--secondary-text-color);
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-list-icon {
@@ -490,6 +499,7 @@ margin-bottom: 50px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-set .type-projects-button.current {
@@ -533,6 +543,35 @@ margin-bottom: 50px;
 
 .card-set-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-set-link-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-set-link:hover .overlay,
+.card-set-link:focus .overlay {
+  transform: translateY(0%);
 }
 
 .card-set-link:hover {
